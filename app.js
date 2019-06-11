@@ -10,7 +10,7 @@ var options = {
 
 function searchCars(cars){
 cars.forEach(function(c,i){
-// formated as .com/make,model,year
+// formated as .com/make/model/year
  options['url'] = `https://www.kbb.com/${cars[i].split(' ')[1]}/${cars[i].split(' ')[2]}/${cars[i].split(' ')[0]}/`;
  rp(options)
  .then(function(html){
